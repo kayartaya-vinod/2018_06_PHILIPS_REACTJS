@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { getContacts } from '../actions/contacts';
 import ContactCard from './ContactCard';
+import AddContact from './AddContact';
 
 class ContactList extends Component {
 
@@ -17,14 +18,15 @@ class ContactList extends Component {
         );
 
         return <Fragment>
-            <div className="row">
-                <div className="col-sm-3"></div>
+            <div className="row container">
                 <div className="col-sm-6">
                     <ul className="list-group">
                         {listItems}
                     </ul>
                 </div>
-                <div className="col-sm-3"></div>
+                <div className="col-sm-6">
+                    <AddContact />
+                </div>
             </div>
         </Fragment>;
     }
